@@ -8,9 +8,7 @@ class NewVisitorTest(StaticLiveServerTestCase):
 	@classmethod
 	def setUpClass(cls):
 		for arg in sys.argv:
-			#print(sys.argv)
 			if 'liveserver' in arg:
-				#print(arg)
 				cls.server_url = 'http://' + arg.split("=")[1]
 				return
 		super().setUpClass()
